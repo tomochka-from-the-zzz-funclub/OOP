@@ -3,25 +3,22 @@
 
 using namespace std;
 
-bool check_for_number(char simbol) {
-    if ((simbol <= '9') && (simbol >= '0')) {
-        return true;
-    }
-    return false;
+bool is_number(char simbol) {
+    return ((simbol <= '9') && (simbol >= '0'));
 }
 
-string separation_of_letters_and_numbers(string string_with_letters_and_numbers) {
+string filter_numbers(string input_string) {
     string numbers = "";
-    bool probel = false;
+    bool space = false;
     bool start_of_answer = false;
-    for (size_t i = 0; i < string_with_letters_and_numbers.size(); i++) {
-        if (check_for_number(string_with_letters_and_numbers[i])) {
-            numbers += string_with_letters_and_numbers[i];
-            probel = false;
+    for (size_t i = 0; i < input_string.size(); i++) {
+        if (is_number(input_string[i])) {
+            numbers += input_string[i];
+            space = false;
             start_of_answer = true;
-        } else if ((probel == false) && (start_of_answer)) {
+        } else if ((space == false) && (start_of_answer)) {
             numbers += " ";
-            probel = true;
+            space = true;
         }
     }
     return numbers;

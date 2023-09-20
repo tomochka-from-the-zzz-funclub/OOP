@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool check_for_number (char simbol);
+bool is_number (char simbol);
 
-string separation_of_letters_and_numbers (string string_with_letters_and_numbers);
+string filter_numbers (string string_with_letters_and_numbers);
 #endif
