@@ -28,5 +28,5 @@ add_custom_target(start_test
 
 # Кастомная цель тестов и main
 add_custom_target(start
-    DEPENDS start_main start_test clean_out
+    DEPENDS start_main start_test 
 )
