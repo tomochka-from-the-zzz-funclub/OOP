@@ -174,7 +174,6 @@ istream& operator>>(istream &in, const Eleven &eleven) {
     for (size_t i = 0; i < size; i++) {
         in >> numbers[i];
     }
-    
     return in;
 }
 
@@ -202,19 +201,29 @@ Eleven Eleven ::operator-(const Eleven& other) {
         if(char_to_int(first[i]) - whol_part >= char_to_int(second[i])){
             //cout << " 1 "<<first[i] << " " <<whol_part << " " << second[i] << endl;
             result.numbers[i] = int_to_char(char_to_int(first[i]) - whol_part - char_to_int(second[i]));
+            /*
             if (result.numbers[i] == '0') {
                 null++;
             } else null = 0;
+            */
+           whol_part = 0;
             //cout << " 2 "<<int_to_char (char_to_int(first[i]) - char_to_int(second[i]) )<< endl;
         } else {
             //cout << " 3 "<< first[i] << " " << whol_part << " " << second[i]  << " O"<< endl;
-            result.numbers[i] = int_to_char(char_to_int(first[i]) - whol_part + Osnova - char_to_int(second[i]) );
+            result.numbers[i] = int_to_char(char_to_int(first[i]) - whol_part + Osnova - char_to_int(second[i]));
             //cout << " 4  "<< result.numbers[i] << endl;
-               if (result.numbers[i] == '0') {
+            /*
+            if (result.numbers[i] == '0') {
                 null++;
             } else null = 0;
+            */
             whol_part = 1;
         }
+    }
+    for(int i = 0; i < max_size_numbers; i++) {
+        if (result.numbers[i] == '0') {
+            null++;
+        } else null = 0;
     }
     Eleven new_result(result.size - null, ZERO_IN_ASCII_CODE);
     for (size_t i = 0; i < new_result.size; i++) {
