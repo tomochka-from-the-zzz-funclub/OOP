@@ -1,0 +1,4 @@
+/home/tamara/2_cours/OOP/lab_4/CMakeFiles/test_point.dir
+/home/tamara/2_cours/OOP/lab_4/CMakeFiles/start_test_point.dir
+/home/tamara/2_cours/OOP/lab_4/CMakeFiles/edit_cache.dir
+/home/tamara/2_cours/OOP/lab_4/CMakeFiles/rebuild_cache.dir
