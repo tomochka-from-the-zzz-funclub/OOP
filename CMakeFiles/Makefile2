@@ -64,6 +64,9 @@ CMAKE_BINARY_DIR = /home/tamara/2_cours/OOP/lab_4
 
 # The main recursive "all" target.
 all: CMakeFiles/test_point.dir/all
+all: CMakeFiles/point.dir/all
+all: CMakeFiles/square.dir/all
+all: CMakeFiles/rectangle.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +75,12 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test_point.dir/clean
+clean: CMakeFiles/point.dir/clean
+clean: CMakeFiles/square.dir/clean
+clean: CMakeFiles/rectangle.dir/clean
+clean: CMakeFiles/start_rectangle.dir/clean
+clean: CMakeFiles/start_square.dir/clean
+clean: CMakeFiles/start_point.dir/clean
 clean: CMakeFiles/start_test_point.dir/clean
 .PHONY : clean
 
@@ -82,7 +91,7 @@ clean: CMakeFiles/start_test_point.dir/clean
 CMakeFiles/test_point.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_point.dir/build.make CMakeFiles/test_point.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_point.dir/build.make CMakeFiles/test_point.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num=1,2 "Built target test_point"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num=9,10 "Built target test_point"
 .PHONY : CMakeFiles/test_point.dir/all
 
 # Build rule for subdir invocation for target.
@@ -100,6 +109,162 @@ test_point: CMakeFiles/test_point.dir/rule
 CMakeFiles/test_point.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_point.dir/build.make CMakeFiles/test_point.dir/clean
 .PHONY : CMakeFiles/test_point.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/point.dir
+
+# All Build rule for target.
+CMakeFiles/point.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num=1,2 "Built target point"
+.PHONY : CMakeFiles/point.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/point.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/point.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/point.dir/rule
+
+# Convenience name for target.
+point: CMakeFiles/point.dir/rule
+.PHONY : point
+
+# clean rule for target.
+CMakeFiles/point.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/clean
+.PHONY : CMakeFiles/point.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/square.dir
+
+# All Build rule for target.
+CMakeFiles/square.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num=6,7,8 "Built target square"
+.PHONY : CMakeFiles/square.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/square.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/square.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/square.dir/rule
+
+# Convenience name for target.
+square: CMakeFiles/square.dir/rule
+.PHONY : square
+
+# clean rule for target.
+CMakeFiles/square.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/clean
+.PHONY : CMakeFiles/square.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rectangle.dir
+
+# All Build rule for target.
+CMakeFiles/rectangle.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num=3,4,5 "Built target rectangle"
+.PHONY : CMakeFiles/rectangle.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rectangle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rectangle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/rectangle.dir/rule
+
+# Convenience name for target.
+rectangle: CMakeFiles/rectangle.dir/rule
+.PHONY : rectangle
+
+# clean rule for target.
+CMakeFiles/rectangle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/clean
+.PHONY : CMakeFiles/rectangle.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/start_rectangle.dir
+
+# All Build rule for target.
+CMakeFiles/start_rectangle.dir/all: CMakeFiles/rectangle.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_rectangle.dir/build.make CMakeFiles/start_rectangle.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_rectangle.dir/build.make CMakeFiles/start_rectangle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num= "Built target start_rectangle"
+.PHONY : CMakeFiles/start_rectangle.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/start_rectangle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/start_rectangle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/start_rectangle.dir/rule
+
+# Convenience name for target.
+start_rectangle: CMakeFiles/start_rectangle.dir/rule
+.PHONY : start_rectangle
+
+# clean rule for target.
+CMakeFiles/start_rectangle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_rectangle.dir/build.make CMakeFiles/start_rectangle.dir/clean
+.PHONY : CMakeFiles/start_rectangle.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/start_square.dir
+
+# All Build rule for target.
+CMakeFiles/start_square.dir/all: CMakeFiles/square.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_square.dir/build.make CMakeFiles/start_square.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_square.dir/build.make CMakeFiles/start_square.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num= "Built target start_square"
+.PHONY : CMakeFiles/start_square.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/start_square.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/start_square.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/start_square.dir/rule
+
+# Convenience name for target.
+start_square: CMakeFiles/start_square.dir/rule
+.PHONY : start_square
+
+# clean rule for target.
+CMakeFiles/start_square.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_square.dir/build.make CMakeFiles/start_square.dir/clean
+.PHONY : CMakeFiles/start_square.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/start_point.dir
+
+# All Build rule for target.
+CMakeFiles/start_point.dir/all: CMakeFiles/point.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_point.dir/build.make CMakeFiles/start_point.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_point.dir/build.make CMakeFiles/start_point.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tamara/2_cours/OOP/lab_4/CMakeFiles --progress-num= "Built target start_point"
+.PHONY : CMakeFiles/start_point.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/start_point.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/start_point.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tamara/2_cours/OOP/lab_4/CMakeFiles 0
+.PHONY : CMakeFiles/start_point.dir/rule
+
+# Convenience name for target.
+start_point: CMakeFiles/start_point.dir/rule
+.PHONY : start_point
+
+# clean rule for target.
+CMakeFiles/start_point.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_point.dir/build.make CMakeFiles/start_point.dir/clean
+.PHONY : CMakeFiles/start_point.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/start_test_point.dir

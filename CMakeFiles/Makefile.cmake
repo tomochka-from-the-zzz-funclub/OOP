@@ -44,5 +44,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_point.dir/DependInfo.cmake"
+  "CMakeFiles/point.dir/DependInfo.cmake"
+  "CMakeFiles/square.dir/DependInfo.cmake"
+  "CMakeFiles/rectangle.dir/DependInfo.cmake"
+  "CMakeFiles/start_rectangle.dir/DependInfo.cmake"
+  "CMakeFiles/start_square.dir/DependInfo.cmake"
+  "CMakeFiles/start_point.dir/DependInfo.cmake"
   "CMakeFiles/start_test_point.dir/DependInfo.cmake"
   )

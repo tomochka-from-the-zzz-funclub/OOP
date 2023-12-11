@@ -3,7 +3,7 @@
 using namespace std;
 
 template <typename T>
-bool square<T>::validate(const point<T>& a, const point<T>& b, const point<T>& c, const point<T>& d) noexcept {
+bool validate( point<T>& a,  point<T>& b,  point<T>& c,  point<T>& d) noexcept {
     if ((a == b) && (b == c) && (c == d)) {
         return false;
     }
@@ -38,10 +38,8 @@ square<T>::square() : A(0.0, 0.0), B(1.0, 0.0), C(1.0, 1.0), D(0.0, 1.0){}
 
 template <typename T>
 square<T>::square(point<T> a, point<T> b, point<T> c, point<T> d) {
-    auto permutation {make_shared<T[]>(3)}; 
-    permutation[0] = dist(a, b);
-    permutation[1] = dist(a, c);
-    permutation[2] = dist(a, d);
+    T permutation [3] {dist(a, b), dist(a, c), dist(a, d)};
+
     double diag = 0;
     for (int i = 0; i < 3; i++){
         if(permutation[i] > diag) {
@@ -59,7 +57,6 @@ square<T>::square(point<T> a, point<T> b, point<T> c, point<T> d) {
                     D = d;
                 } else {
                     cout << "points not defined square" << endl;
-                    delete permutation;
                     square();
                 }
             }
@@ -72,7 +69,7 @@ square<T>::square(point<T> a, point<T> b, point<T> c, point<T> d) {
                     D = d;
                 } else {
                     cout << "points not defined square" << endl;
-                    delete permutation;
+                   
                     square();
                 }
             }
@@ -85,7 +82,6 @@ square<T>::square(point<T> a, point<T> b, point<T> c, point<T> d) {
                     D = b;
                 } else {
                     cout << "points not defined square" << endl;
-                    delete permutation;
                     square();
                 }
             }
@@ -94,7 +90,48 @@ square<T>::square(point<T> a, point<T> b, point<T> c, point<T> d) {
 }
 
 template <typename T>
-square<T>::square(square& other) : A(other.A), B(other.B), C(other.C), D(other.D) {}
+square<T>::square(square<T>& other) : A(other.get_a()), B(other.get_b()), C(other.get_c()), D(other.get_d()) {}
+
+template <typename T>
+point<T> square<T>::get_a() const{
+    return this->A;
+}
+
+template <typename T>
+point<T> square<T>::get_b() const{
+    return this->B;
+}
+
+template <typename T>
+point<T> square<T>::get_c() const{
+    return this->C;
+}
+
+template <typename T>
+point<T> square<T>::get_d() const{
+    return this->D;
+}
+
+template <typename T>
+void square<T>::set_a(point<T> a){
+    this->A = a;
+}
+
+template <typename T>
+void square<T>::set_b(point<T> b){
+    this->B = b;
+}
+
+template <typename T>
+void square<T>::set_c(point<T> c){
+    this->C = c;
+}
+
+template <typename T>
+void square<T>::set_d(point<T> d){
+    this->D = d;
+}
+
 
 template <typename T>
 point<T> square<T>::geometric_centre(){
@@ -106,21 +143,13 @@ point<T> square<T>::geometric_centre(){
 
 template <typename T>
 square<T> :: operator double() const {
-    return 0.5 * dist(A,C) * dist(A,C);
+    return 0.5 * dist(this->get_a(),this->get_c()) * dist(this->get_a(),this->get_c());
 }
 
 template <typename T>
 bool operator==(square<T>& one_sq, square<T>& two_sq) {
-    auto coordinates_one_sq {make_shared<point<T>[]>(4)};
-    auto coordinates_two_sq {make_shared<point<T>[]>(4)};
-    coordinates_one_sq[0] = one_sq.A;
-    coordinates_one_sq[1] = one_sq.B;
-    coordinates_one_sq[2] = one_sq.C;
-    coordinates_one_sq[3] = one_sq.D;
-    coordinates_two_sq[0] = two_sq.A;
-    coordinates_two_sq[1] = two_sq.B;
-    coordinates_two_sq[2] = two_sq.C;
-    coordinates_two_sq[3] = two_sq.D;
+    point<T> coordinates_one_sq [4] {one_sq.get_a(), one_sq.get_b(), one_sq.get_c(), one_sq.get_d()};
+    point<T> coordinates_one_sq [4] {two_sq.get_a(), two_sq.get_b(), two_sq.get_c(), two_sq.get_d()};
     bool flag = false;
     for (int i = 0; i < 4; i++) {
         flag = false;
@@ -131,9 +160,13 @@ bool operator==(square<T>& one_sq, square<T>& two_sq) {
             }
         }
         if (!flag) {
+            delete coordinates_one_sq; 
+            delete coordinates_two_sq;
             return false;
         }
     }
+    delete coordinates_one_sq; 
+    delete coordinates_two_sq;
     return true;
 }
 
@@ -141,10 +174,8 @@ template <typename T>
 std::istream& operator>>(std::istream& is, square<T>& s) {
     point<T> a, b, c, d;
     is >> a >> b >> c >> d; 
-    auto permutation {make_shared<T[]>(3)};
-    permutation[0] = dist(a, b);
-    permutation[1] = dist(a, c);
-    permutation[2] = dist(a, d);
+    T* permutation = new T [3] {dist(a, b), dist(a, c), dist(a, d)};
+
     double diag = 0;
     for (int i = 0; i < 3; i++){
         if(permutation[i] > diag) {
@@ -154,7 +185,7 @@ std::istream& operator>>(std::istream& is, square<T>& s) {
     for(int i = 0; i < 3; i++){
         if(permutation[i] == diag) {
             if(i == 0){
-                bool check_square = square<T>::validate(a, c, b, d);
+                bool check_square = validate(a, c, b, d);
                 if(check_square){
                     s = square (a, c, b, d);
                 } else {
@@ -162,7 +193,7 @@ std::istream& operator>>(std::istream& is, square<T>& s) {
                 }
             }
             if(i == 1){
-                bool check_square = square<T>::validate(a, b, c, d);
+                bool check_square = validate(a, b, c, d);
                 if(check_square){
                     s = square (a, b, c, d);
                 } else {
@@ -170,7 +201,7 @@ std::istream& operator>>(std::istream& is, square<T>& s) {
                 }
             }
             if(i == 2){
-                bool check_square = square<T>::validate(a, c, d, b);
+                bool check_square = validate(a, c, d, b);
                 if(check_square){
                     s = square (a, c, d, b);
                 } else {
@@ -179,14 +210,11 @@ std::istream& operator>>(std::istream& is, square<T>& s) {
             }
         }
     } 
-    delete permutation;
     return is;
 }
 
 template <typename T>
 std::ostream& operator<<(std::ostream& os, square<T>& s) {
-    os << s.A << s.B << s.C << s.D;
+    os << s.get_a() << s.get_b() << s.get_c() << s.get_d();
     return os;
 }
-
-

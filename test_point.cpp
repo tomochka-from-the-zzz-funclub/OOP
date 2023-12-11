@@ -20,6 +20,7 @@ TEST(test_point, get){
 TEST(test_point, dist_){
     point<int> a (-1, 3);
     point<int> b (2, 7);
+    
     ASSERT_EQ(dist(a, b), 5);
 }
 

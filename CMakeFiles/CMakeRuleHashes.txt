@@ -1,2 +1,5 @@
 # Hashes of file build rules.
+135db0ac56f2ad9b13ca424cc3d5fe48 CMakeFiles/start_point
+a2516f75f43c6704a4b68a328e284fe8 CMakeFiles/start_rectangle
+967c84e77d6abbfaeeb58359f190651a CMakeFiles/start_square
 c7f2580fa8d40755ce5422ca65c99248 CMakeFiles/start_test_point

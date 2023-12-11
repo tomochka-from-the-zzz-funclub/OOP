@@ -1,0 +1,1 @@
+g++  -Wall CMakeFiles/rectangle.dir/point.cpp.o CMakeFiles/rectangle.dir/rectangle.cpp.o -o rectangle 

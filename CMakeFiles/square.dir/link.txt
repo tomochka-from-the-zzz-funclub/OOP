@@ -1,0 +1,1 @@
+g++  -Wall CMakeFiles/square.dir/point.cpp.o CMakeFiles/square.dir/square.cpp.o -o square 

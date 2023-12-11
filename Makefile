@@ -130,6 +130,84 @@ test_point/fast:
 .PHONY : test_point/fast
 
 #=============================================================================
+# Target rules for targets named point
+
+# Build rule for target.
+point: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 point
+.PHONY : point
+
+# fast build rule for target.
+point/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/build
+.PHONY : point/fast
+
+#=============================================================================
+# Target rules for targets named square
+
+# Build rule for target.
+square: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 square
+.PHONY : square
+
+# fast build rule for target.
+square/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/build
+.PHONY : square/fast
+
+#=============================================================================
+# Target rules for targets named rectangle
+
+# Build rule for target.
+rectangle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rectangle
+.PHONY : rectangle
+
+# fast build rule for target.
+rectangle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/build
+.PHONY : rectangle/fast
+
+#=============================================================================
+# Target rules for targets named start_rectangle
+
+# Build rule for target.
+start_rectangle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 start_rectangle
+.PHONY : start_rectangle
+
+# fast build rule for target.
+start_rectangle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_rectangle.dir/build.make CMakeFiles/start_rectangle.dir/build
+.PHONY : start_rectangle/fast
+
+#=============================================================================
+# Target rules for targets named start_square
+
+# Build rule for target.
+start_square: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 start_square
+.PHONY : start_square
+
+# fast build rule for target.
+start_square/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_square.dir/build.make CMakeFiles/start_square.dir/build
+.PHONY : start_square/fast
+
+#=============================================================================
+# Target rules for targets named start_point
+
+# Build rule for target.
+start_point: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 start_point
+.PHONY : start_point
+
+# fast build rule for target.
+start_point/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_point.dir/build.make CMakeFiles/start_point.dir/build
+.PHONY : start_point/fast
+
+#=============================================================================
 # Target rules for targets named start_test_point
 
 # Build rule for target.
@@ -141,6 +219,84 @@ start_test_point: cmake_check_build_system
 start_test_point/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/start_test_point.dir/build.make CMakeFiles/start_test_point.dir/build
 .PHONY : start_test_point/fast
+
+point.o: point.cpp.o
+.PHONY : point.o
+
+# target to build an object file
+point.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/point.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/point.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/point.cpp.o
+.PHONY : point.cpp.o
+
+point.i: point.cpp.i
+.PHONY : point.i
+
+# target to preprocess a source file
+point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/point.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/point.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/point.cpp.i
+.PHONY : point.cpp.i
+
+point.s: point.cpp.s
+.PHONY : point.s
+
+# target to generate assembly for a file
+point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/point.dir/build.make CMakeFiles/point.dir/point.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/point.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/point.cpp.s
+.PHONY : point.cpp.s
+
+rectangle.o: rectangle.cpp.o
+.PHONY : rectangle.o
+
+# target to build an object file
+rectangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/rectangle.cpp.o
+.PHONY : rectangle.cpp.o
+
+rectangle.i: rectangle.cpp.i
+.PHONY : rectangle.i
+
+# target to preprocess a source file
+rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/rectangle.cpp.i
+.PHONY : rectangle.cpp.i
+
+rectangle.s: rectangle.cpp.s
+.PHONY : rectangle.s
+
+# target to generate assembly for a file
+rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rectangle.dir/build.make CMakeFiles/rectangle.dir/rectangle.cpp.s
+.PHONY : rectangle.cpp.s
+
+square.o: square.cpp.o
+.PHONY : square.o
+
+# target to build an object file
+square.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/square.cpp.o
+.PHONY : square.cpp.o
+
+square.i: square.cpp.i
+.PHONY : square.i
+
+# target to preprocess a source file
+square.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/square.cpp.i
+.PHONY : square.cpp.i
+
+square.s: square.cpp.s
+.PHONY : square.s
+
+# target to generate assembly for a file
+square.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/square.dir/build.make CMakeFiles/square.dir/square.cpp.s
+.PHONY : square.cpp.s
 
 test_point.o: test_point.cpp.o
 .PHONY : test_point.o
@@ -174,8 +330,23 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... start_point"
+	@echo "... start_rectangle"
+	@echo "... start_square"
 	@echo "... start_test_point"
+	@echo "... point"
+	@echo "... rectangle"
+	@echo "... square"
 	@echo "... test_point"
+	@echo "... point.o"
+	@echo "... point.i"
+	@echo "... point.s"
+	@echo "... rectangle.o"
+	@echo "... rectangle.i"
+	@echo "... rectangle.s"
+	@echo "... square.o"
+	@echo "... square.i"
+	@echo "... square.s"
 	@echo "... test_point.o"
 	@echo "... test_point.i"
 	@echo "... test_point.s"

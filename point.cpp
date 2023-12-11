@@ -1,7 +1,7 @@
 #include "point.h"
 
 #include <cmath>
-
+using namespace std;
 template <class T>
 point<T>::point(): X(0), Y(0) {}
 
@@ -9,13 +9,10 @@ template <typename T>
 point<T>::point(T x, T y) : X{x}, Y{y} {}
 
 template <typename T>
-point<T>::point(point<T>& other) : X(other.X), Y(other.Y) {}
+point<T>::point(const point<T>& other) : X(other.get_x()), Y(other.get_y()) {}
 
 template <typename T>
-point<T>::point(const point<T>& other) : X(other.X), Y(other.Y) {}
-
-template <typename T>
-double dist(point<T>& one, point<T>& two) {
+double dist(point<T> one, point<T> two) {
   double dx = (one.get_x() - two.get_x());
   double dy = (one.get_y() - two.get_y());
   return std::sqrt(dx*dx + dy*dy);
@@ -32,8 +29,21 @@ T point<T>::get_y() const{
 }
 
 template <typename T>
+void point<T>::set_x(T x_){
+    this->X = x_;
+}
+
+template <typename T>
+void point<T>::set_y(T y_){
+    this->Y = y_;
+}
+
+template <typename T>
 std::istream& operator>>(std::istream& is, point<T>& p)  {
-  is >> p.X >> p.Y;
+  T x, y;
+  is >> x >> y;
+  p.set_x(x);
+  p.set_y(y);
   return is;
 }
 
